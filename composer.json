@@ -1,0 +1,26 @@
+{
+  "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/wordpress-importer": "0.6.*",
+    "wpackagist-plugin/akismet": "3.3.*",
+    "wpackagist-plugin/more-privacy-options": "4.6",
+    "wpackagist-plugin/multisite-plugin-manager": "3.1.*",
+    "wpackagist-plugin/rewrite-rules-inspector": "1.2.1",
+    "wpackagist-plugin/ssl-insecure-content-fixer": "2.2.*",
+    "wpackagist-plugin/wpmu-plugin-stats": "2.2.0",
+    "wpackagist-plugin/wpmu-theme-usage-info": "2.0.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "public/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin", "wpackagist-plugin/more-privacy-options"],
+      "public/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+      "public/wp-content/themes/{$name}": ["type:wordpress-theme"]
+    }
+  }
+}
